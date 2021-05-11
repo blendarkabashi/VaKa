@@ -1,0 +1,116 @@
+//  main: ../style.less
+
+// ==========================================================================
+// VALUES
+// ==========================================================================
+
+/* colors */
+
+@hamburger-background: black;
+@hamburger-text: white;
+@hamburger-background-hover: black;
+@hamburger-text-hover: white;
+@menu-overlay-background: #eeeeee;
+@menu-outline-color: #343436;
+@menu-outline-color-hover: #343436;
+@menu-hover-color: #343436;
+@not-black-but-dark: #3d3d3d;
+@silver: #ffffff;
+@main-black: #131313;
+/* general */
+*, *::before, *::after {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+	font-family:      // Safari for OS X and iOS (San Francisco)
+	-apple-system,
+	// Chrome < 56 for OS X (San Francisco)
+	BlinkMacSystemFont,
+	// Windows
+	"Segoe UI",
+	// Android
+	"Roboto",
+	// Basic web fallback
+	"Helvetica Neue", Arial, sans-serif,
+	// Emoji fonts
+	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+body {
+	font-size: 1rem;
+	color: #fff;
+}
+a {
+  text-decoration: none;
+  color: rgba(225, 255, 255, .8);
+}
+
+h1{
+  font-weight: 600;
+  &.bold{
+    font-weight: bold;
+  }
+}
+h2,h3,h4,h5{
+  font-weight: normal;
+}
+
+.container{
+  max-width: 1800px;
+  &.narrow{
+    max-width: 1400px;
+  }
+}
+/* mixins */
+.transition(@all) {
+  -webkit-transition: @all;
+  -moz-transition: @all;
+  -o-transition: @all;
+  transition: @all;
+}
+
+.transition-delay(@delay) {
+  -webkit-transition-delay: @delay;
+  -moz-transition-delay: @delay;
+  -o-transition-delay: @delay;
+  -ms-transition-delay: @delay;
+  transition-delay: @delay;
+}
+
+.rotate(@deg) {
+  -webkit-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
+}
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow: @string;
+  box-shadow: @string;
+}
+
+.letter-spacing ( @psValue ){
+  letter-spacing: ( @psValue / 1000 ) * 1em; 
+}
+
+.flexcenter () {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* insert fonts here */
+
+// Container styling
+
+
+// Title and Description styling
